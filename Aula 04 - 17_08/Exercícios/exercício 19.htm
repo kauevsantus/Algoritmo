@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19</title>
+</head>
+<body>
+    <h1>Reforma da casa</h1>
+    <br>
+    Quantos meses a reforma da casa levará: <input id="ipt_meses">
+    
+    <br>
+    <button onclick="semanal()">Ver projeção semanal</button>
+    <div id="projecao_semanal"></div>
+    <br>
+    <button onclick="mensal()">Ver projeção mensal</button>
+    <div id="projecao_mensal" ></div>
+    <br>
+    <button onclick="total()">Ver projeção total</button>
+    <div id="projecao_total"></div>
+</html>
+
+<script>
+
+function semanal() {
+    var semanal = 380 * 7
+
+    projecao_semanal.innerHTML = `<br> R$ ${semanal.toFixed(2)}`
+}
+function mensal() {
+    var mensal = 380 * 30
+
+    projecao_mensal.innerHTML = `<br> R$ ${mensal.toFixed(2)}`
+}
+function total() {
+    var semanal = 380 * 7
+    var mensal = 380 * 30
+    var total = ipt_meses.value * mensal  
+
+    projecao_total.innerHTML = `<br> R$ ${total.toFixed(2)}`    
+}
+</script>

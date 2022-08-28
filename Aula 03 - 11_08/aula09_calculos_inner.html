@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos na Página</title>
+</head>
+
+<body>
+    <h2>Minha Calculadora Preferida!!!</h2>
+
+    Entre com o primeiro número:
+    <input id="ipt_pri_num" type="text" placeholder="Primeiro Número"> <br><br>
+
+    Entre com o segundo número:
+    <input id="ipt_seg_num" type="text" placeholder="Segundo Número">
+    <br><br>
+
+    <button onclick="multiplicar()">Multiplicação</button>
+    <button onclick="dividir()">Divisão</button>
+    <button onclick="exponenciar()">Exponenciação</button>
+    <button onclick="raiz()">Radiciação</button>
+    <button onclick="subtrair()">Subtração</button>
+    <button onclick="somar()">Soma</button>
+    
+    <div id="div_msg"></div>
+
+</body>
+
+</html>
+<script>
+    function multiplicar() {
+        // Observe que o cálculo PODE ser feito dentro da expressão na interpolação
+        div_msg.innerHTML += `<br>O resultado da multiplicação é: <b> 
+            ${ipt_pri_num.value * ipt_seg_num.value} </b>`;
+    }
+    function dividir() {
+        div_msg.innerHTML += `<br>O resultado da divisão é: <b> 
+            ${ipt_pri_num.value / ipt_seg_num.value} </b>`;
+    }
+    function exponenciar() {
+        div_msg.innerHTML += `<br>O resultado da exponenciação é: <b> 
+            ${ipt_pri_num.value ** ipt_seg_num.value} </b>`;
+    }
+    function raiz() {
+        div_msg.innerHTML += `<br>O resultado da radiciação é: <b> 
+            ${ipt_pri_num.value ** (1/ipt_seg_num.value)} </b>`;
+    }
+    function subtrair() {
+        div_msg.innerHTML += `<br>O resultado da subtração é: <b> 
+            ${ipt_pri_num.value - ipt_seg_num.value} </b>`;
+    }
+    function somar() {
+        div_msg.innerHTML += `<br>O resultado da soma é: <b> 
+            ${Number(ipt_pri_num.value) + Number(ipt_seg_num.value)} </b>`;
+    }
+
+</script>

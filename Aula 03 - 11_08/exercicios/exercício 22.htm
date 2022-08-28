@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 22</title>
+</head>
+<body>
+    <h1>Votação</h1>
+    <br>
+    Inserir a quantidade de votos que o Zé Buduia: <input id="ipt_ze">
+    <br>
+    Inserir a quantidade de votos que a Maria Bigodenha: <input id="ipt_maria">
+    <br>
+    Inserir a quantidade de votos brancos: <input id="ipt_branco">
+    <br>
+    Inserir a quantidade de votos nulos que houveram na eleição: <input id="ipt_nulo">
+    <br>
+    <button onclick="eleicao()">"Resultado da Eleição</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function eleicao() {
+       var ax_ze =  Number(ipt_ze.value)
+       var ax_maria =  Number(ipt_maria.value)
+       var ax_branco =  Number(ipt_branco.value)
+       var ax_nulo =  Number(ipt_nulo.value)
+       var total = Number(ax_ze + ax_maria + ax_branco + ax_nulo) 
+       var invalidos = Number(ax_branco + ax_nulo)
+
+        div_msg.innerHTML = 'Total de votos: ' + (ax_ze + ax_maria + ax_branco + ax_nulo) + '<br>' +
+        'Zé Ruela: ' + ax_ze/total * 100 + '%' + ' (' + ax_ze + ' votos' + ')' + '<br>' +
+        'Maria Bigodenha ' + ax_maria/total * 100 + '%' + ' (' + ax_maria + ' votos' + ')' + '<br>' +
+        'Inválidos: ' + invalidos/total * 100 + '%' + ' (' + invalidos + ' votos' + ')'
+    }
+</script>

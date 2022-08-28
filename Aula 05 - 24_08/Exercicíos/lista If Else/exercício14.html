@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h2>Sorveteria 4Miga</h2>
+
+    Inserir o valor de referencia da grama: <input type="text" id="grama" placeholder="insira o valor da gramas">
+    <br>
+    Inserir o peso do sorvete em gramas: <input type="text" id="peso" placeholder="insira a quantidade de gramas">
+    <br>
+    Inserir o tipo de cobertura: <input type="text" id="cobertura" placeholder="insira a cobertura">
+    <br><br>
+    <button onclick="calcular()">Valor do sorvete</button>
+
+
+    <div id="preco"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var total = 0
+
+        if (cobertura.value != 'C') {
+            total = Number(grama.value) * (Number(peso.value) + 0.005)
+            
+        } else {
+            total = grama.value * peso.value
+
+        }
+        if (total > 10) {
+            preco.innerHTML = `O valor do sorvete sera R$${total.toFixed(2)}, <b>esse sorvete vai comprometer a mesada</b>`
+
+        } else {
+            preco.innerHTML = `O valor do sorvete sera R$${total.toFixed(2)}, <b>você esta manerando</b>`
+
+
+        }
+
+           
+    }
+
+</script>

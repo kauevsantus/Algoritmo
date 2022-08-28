@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    <h1 style="color: blue;">Luz de Paulopolis</h1>
+    <br>
+    Inserir a quantidade de kWh no mês: <input type="text" id="kwh" placeholder="insira aqui">
+    <br>
+    <button onclick="calcular()">calcular conta de luz</button>
+
+    <div id="luz"></div>
+
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var total = 0.85 * kwh.value
+
+        if (kwh.value < 100) {
+            total *= 0.9
+        }
+
+        alert(`o valor da conta sera de R$${total.toFixed(2)}`)
+
+
+    }
+</script>

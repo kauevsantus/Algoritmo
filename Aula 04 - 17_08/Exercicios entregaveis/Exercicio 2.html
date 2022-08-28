@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h1>Contabilidade</h1>
+    <br>
+    Saldo anterior: <input id="anterior">
+    <br>
+    Valor de debito: <input id="debito">
+    <br>
+    Valor de crédito: <input id="credito">
+    <br>
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="calcula"></div>
+
+</body>
+</html>
+
+<script>
+   function calcular() {
+    var ax_anterior = Number(anterior.value)
+    var ax_credito = Number(credito.value)
+    var final = ax_anterior + ax_credito - Number(debito.value)
+    var diferenca = ax_anterior - final
+    var inicial = ax_anterior + ax_credito
+    var proporcao = final / inicial * 100
+    var movimentacao = ax_credito - debito.value
+
+    calcula.innerHTML = `O saldo anterior é ${ax_anterior} com a movimentação de
+    ${movimentacao} tendo um saldo final de ${final}, uma diferença de ${diferenca} e
+    uma proporção de ${proporcao} %` 
+
+    anterior.value = ''
+    debito.value = ''
+    credito.value = ''
+   }
+
+</script>

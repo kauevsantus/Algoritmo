@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    <h1>Exercício 5</h1>
+    <br>
+    Qual o nome do guerreiro?: <input id="ipt_guerreiro">
+    <br>
+    Qual o ki normal do guerreiro: <input id="ipt_ki">
+    <br>
+    <button onclick="ki_formas()">Ver ki em cada forma</button>
+</body>
+</html>
+
+<script>
+    function ki_formas() {
+        alert(ipt_guerreiro.value + " seu ki na forma Super Sayajin é " + ipt_ki.value * 50)
+        alert(ipt_guerreiro.value + " seu ki na forma Super Sayjin 2 é " + ipt_ki.value * 100)
+    }
+</script>

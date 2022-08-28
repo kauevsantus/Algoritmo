@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 20</title>
+</head>
+<body>
+    <h1>Exercício 20</h1>
+    <br>
+    Inserir sálario do irmão de Igor: <input id="ipt_salario">
+    <br>
+    Inserir a quantidade de ficantes do irmão de Igor: <input id="ipt_ficantes">
+    <br>
+    Inserir quantidades de foras que o irmão de Igor já levou: <input id="ipt_foras">
+    <br>
+    <button onclick="resultado()">Resultado</button>
+    <br>
+    <div id="div_msg">resultado</div>
+</body>
+</html>
+
+<script>
+    function resultado() {
+        div_msg.innerHTML = '<br>Sálario do Igor: ' + (ipt_salario.value -(ipt_salario.value * 0.1)) +
+        ' <br>Número de ficantes do Igor: ' + (ipt_ficantes.value - 1) +
+        ' <br>Número de foras do Igor: ' + (Number(ipt_foras.value) + 1)
+        
+    }
+</script>

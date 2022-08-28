@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <h1>Valor Passagem</h1>
+    <br>
+    <button onclick="passagem1()">08 passagens</button>
+    <br><br>
+    <button onclick="passagem2()">20 passagens</button>
+    <br><br>
+    <button onclick="passagem3()">50 passagens</button>
+    <br><br>
+
+    <div id="passagem"></div>
+</html>
+
+<script>
+
+function passagem1() {
+    var passagem8 = 8
+    var economizou = Number((35.20-32.45)/35.20*100)
+    var bonus = Number(economizou/4.40) 
+
+    passagem.innerHTML = `<br> Ao comprar ${passagem8} passagens, você pagou ${economizou.toFixed(0)}% a menos. É como se tivesse
+ganhado ${bonus.toFixed(0)} passagens de "bônus".` 
+}
+
+function passagem2() {
+    var passagem_vinte = 20
+    var economizou_vinte = Number((88-78.65)/88*100)
+    var bonus_vinte = Number (economizou_vinte/4.40)
+    
+    passagem.innerHTML = `<br> Ao comprar ${passagem_vinte} passagens, você pagou ${economizou_vinte.toFixed(0)}% a menos.
+    É como se tivesse ganhado ${bonus_vinte.toFixed(0)} passagens de "bônus".`
+}
+
+function passagem3() {
+    var passagem50 = 50
+    var economizou50 = Number ((220-191,41)/220*100)
+    var bonus50 = economizou50/4.40
+    passagem.innerHTML = `<br> Ao comprar ${passagem50} passagens, você pagou ${economizou50.toFixed(0)}% a menos. É como se tivesse
+ganhado ${bonus50.toFixed(0)} passagens de "bônus".`
+}
+</script>

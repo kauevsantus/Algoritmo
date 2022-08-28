@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>div - Caixas</title>
+</head>
+
+<body>
+    <!-- 
+        A tag div define uma "caixa" onde o corpo da tag é escrito dentro dessa caixa.
+
+        A div usa a largura toda da página ou seja ela usa a linha toda.
+        
+        Mais adiante em PI vocês aprenderão a mudar o atibuto de estilo dessa caixa
+        para alterar altura, largura, cor etc.
+        
+        Caso necessário, a div usará quantas linhas forem necessária para "escrever" todo o 
+        conteúdo da div, ou seja, se o corpo da div não couber na largura da linha, a div usará 
+        a próxima linha
+    -->
+    <h1>alert</h1>
+    <br>
+    Entre com o seu nome: <input id="ipt_nome" type="text">
+    <br>
+    Entre com o seu sobrenome: <input id="ipt_sobrenome" type="text">
+    <br>
+    <button onclick="mostrar_com_alert()">Mostrar com alert</button> 
+    <button onclick="mostrar_na_div()">Mostrar depois do Botão</button>
+    <button onclick="mini_cadastro()">Montar um Mini Cadastro</button>
+    <br><br>
+    <div id="div_msg">Cadastro de Nomes</div>
+</body>
+</html>
+<script>
+    function mostrar_com_alert() {
+        alert(ipt_nome.value + " " + ipt_sobrenome.value)
+    }
+    
+    /*
+    No JavasScript usamos o id da tag seguido de .innerHTML para manipular o conteúdo
+    do corpo dessa tag. Por exemplo, o id da nossa tag <div> é: div_msg, então vamos
+    usar: div_msg.innerHTML para manipular o seu corpo.
+
+    Para alterar o conteúdo do corpo da tag usamos o sinal = (igual)  Com ele vamos 
+    atribuir um novo valor para o corpo da tag. 
+    Primeiro eu escrevo o id da tag seguindo de .innerHTML, depois eu uso o sinal = (atribuição) 
+    depois eu passo o novo valor a ser atribuido. 
+    */
+    function mostrar_na_div() {
+        div_msg.innerHTML = ipt_nome.value + " " + ipt_sobrenome.value;
+    }
+
+    /*
+    Para alterar o conteúdo do corpo da tag usamos o sinal = (igual)
+    Porém.......
+    Para incluir mais um conteúdo no corpo da tag, ou seja, incluir 
+    um conteúdo sem apagar o conteúdo anterior nós usamos o sinal 
+    += (mais igual)  
+    */
+    function mini_cadastro() {
+        div_msg.innerHTML += ipt_nome.value + " " + ipt_sobrenome.value;
+    }
+
+</script>

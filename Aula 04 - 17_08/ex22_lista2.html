@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exec22_Votação</title>
+</head>
+<body>
+    <h1>Votação</h1>
+    Quantidade de votos do Zé Buduia: <input id="ipt_votos_buduia">
+    <br>
+    Quantidade de votos da Maria Bigodenha: <input id="ipt_votos_bigodenha">
+    <br>
+    Quantidade de votos em branco: <input id="ipt_votos_brancos">
+    <br>
+    Quantidade de votos nulos: <input id="ipt_votos_nulos">
+    <br><br>
+    <button onclick="calcular()">Resultado da Eleição</button>
+    <br><br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var ax_votos_invalidos =  Number(ipt_votos_brancos.value) +
+            Number(ipt_votos_nulos.value);
+        var ax_total_votos = Number(ipt_votos_buduia.value) +
+            Number(ipt_votos_bigodenha.value) + ax_votos_invalidos;
+                       
+        div_msg.innerHTML = "Total de votos: " + ax_total_votos + "<br>";
+
+        div_msg.innerHTML += "Zé Buduia: " + 
+            (ipt_votos_buduia.value / ax_total_votos * 100).toFixed(0) + 
+            "% (" + ipt_votos_buduia.value + " votos) <br>";
+            
+        div_msg.innerHTML += "Maria Bigodenha: " + 
+            (ipt_votos_bigodenha.value / ax_total_votos * 100).toFixed(0) + 
+            "% (" + ipt_votos_bigodenha.value + " votos) <br>";
+
+        div_msg.innerHTML += "Inválidos: " + 
+            (ax_votos_invalidos / ax_total_votos * 100).toFixed(0) + 
+            "% (" + ax_votos_invalidos + " votos)";   
+
+        // Observe que para cada linha que foi emitida na página
+        // foi utilizado um innerHTML.
+        // Repare que você pode usar o toFixed(0) para mostrar sem 
+        // casas decimais.
+
+
+
+        
+        // Nos comando abaixo usamos a intepolação
+        // iniciamos e finalizamos o texto com CRASE! Usamos ${} para colocar  
+        // a parte dinamica, ou seja EXPRESSÕES (ex: valor de um campo)
+
+        // div_msg.innerHTML += `Total de votos: ${ax_total_votos} <br>
+        // Zé Buduia: ${(ipt_votos_buduia.value / ax_total_votos * 100).toFixed(0)}% 
+        //     (${ipt_votos_buduia.value} votos) <br>
+        // Maria Bigodenha: ${(ipt_votos_bigodenha.value / ax_total_votos * 100).toFixed(0)}% 
+        //     (${ipt_votos_bigodenha.value} votos) <br>
+        // Inválidos: ${(ax_votos_invalidos / ax_total_votos * 100).toFixed(0)}% 
+        //     (${ax_votos_invalidos} votos)`;   
+
+ 
+    }
+</script>

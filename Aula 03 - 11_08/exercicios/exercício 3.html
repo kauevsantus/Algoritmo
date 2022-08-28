@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h1>Exercício 3</h1>
+    <br>
+    Qual o valor da passagem?: <input id="ipt_passagem" type="text">
+    <br>
+    Quantas viagens fara no mês: <input id="ipt_viagem" type="text">
+    <br>
+    <button onclick="economia()">Ver economia</button>
+</body>
+</html>
+
+<script>
+    function economia() {
+        alert("Você economizará R$" + (ipt_passagem.value * ipt_viagem.value));
+    }
+</script>

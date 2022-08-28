@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    Inserir nota 1: <input id="nota1" type="text">
+    <br><br>
+    Inserir nota 2: <input id="nota2" type="text">
+    <br><br>
+    Inserir nota 3: <input id="nota3" type="text">
+    <br><br>
+    <button onclick="analise()">Analisar desempenho</button>
+
+    <div id="analisar"></div>
+</body>
+</html>
+
+<script>
+    function analise() {
+        var notas = Number(nota1.value) + Number(nota2.value) + Number(nota3.value)
+        var media = notas / 3
+
+        analisar.innerHTML = `<br> Sua média foi de ${media.toFixed(1)}, onde ${media.toFixed(1)} é a média calculada`
+
+        if (media > 9.4) {
+            
+            analisar.innerHTML += `<br><br> Parabéns, você é fora de série!`
+        }
+    }
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <h1>Exercício 10</h1>
+    <br>
+    Qual o seu peso?: <input id="ipt_peso">
+    <br>
+    Qual a sua altura?: <input id="ipt_altura">
+    <br>
+    <button onclick="imc_homem()">IMC Homem</button>
+    <button onclick="imc_mulher()">IMC Mulher</button>
+    <br>
+    Seu IMC é:<div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function imc_homem() {
+        div_msg.innerHTML = ipt_peso.value / (ipt_altura.value ** 2);
+    }
+    function imc_mulher() {
+        div_msg.innerHTML = ipt_peso.value / (ipt_altura.value ** 2) - 10/100;
+    }
+</script>

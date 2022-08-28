@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos na Página</title>
+</head>
+
+<body>
+    <h2>Minha Calculadora Preferida!!!</h2>
+
+    
+    Entre com o primeiro número:
+    <input id="ipt_pri_num" type="text" placeholder="Primeiro Número"> <br><br>
+
+    Entre com o segundo número:
+    <input id="ipt_seg_num" type="text" placeholder="Segundo Número">
+    <br><br>
+
+    <button onclick="multiplicar()">Multiplicação</button>
+    <button onclick="dividir()">Divisão</button>
+    <button onclick="exponenciar()">Exponenciação</button>
+    <button onclick="raiz()">Radiciação</button>
+    <button onclick="subtrair()">Subtração</button>
+    <button onclick="somar()">Soma</button>
+    
+</body>
+
+</html>
+<script>
+    /*
+    OBSERVAÇÃO: É possível fazer a Operação aritmética usando
+    em conjunto com a concatenação (visto na aula passada)
+    Veja como fica o comando juntando os dois alert de cada operação
+    */
+    function multiplicar() {
+        alert ("O resultado da multiplicação é: " + ipt_pri_num.value * ipt_seg_num.value);
+    }
+    function dividir() {
+        alert ("O resultado da divisão é: " + ipt_pri_num.value / ipt_seg_num.value);
+    }
+    function exponenciar() {
+        alert ("O resultado da exponenciação é: "  + ipt_pri_num.value ** ipt_seg_num.value);
+    }
+    function raiz() {
+        alert ("O resultado da radiciação é: "  + ipt_pri_num.value ** (1/ipt_seg_num.value));
+    }
+    /*
+    Observe que para os dois casos abaixo a operação aritmética não tem
+    preferência em relaão a concatenação....
+
+    Nos casos anterior primeiro e feito a **, * ou / para depois fazer + ou -
+    */
+    function subtrair() {
+        alert ("O resultado da subtração é: " + (ipt_pri_num.value - ipt_seg_num.value));
+    }
+    function somar() {
+        alert ("O resultado da soma é: " + (Number(ipt_pri_num.value) + Number(ipt_seg_num.value)));
+    }
+
+</script>
